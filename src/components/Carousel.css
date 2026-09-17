@@ -1,0 +1,204 @@
+.carousel {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin-top: -50px;
+  position: relative;
+  font-size: 12px;
+}
+
+.carousel__stage {
+  position: absolute;
+  inset: 0;
+}
+
+.carousel__bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(60%);
+}
+
+.carousel__content {
+  position: absolute;
+  top: 20%;
+  width: 1140px;
+  max-width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-right: 30%;
+  box-sizing: border-box;
+  color: #fff;
+  text-shadow: 0 5px 10px #0004;
+}
+
+.carousel__content > * {
+  opacity: 0;
+  filter: blur(20px);
+  transform: translateY(50px);
+  animation: carousel-show 0.5s linear forwards;
+}
+
+.carousel__stack {
+  font-weight: bold;
+  letter-spacing: 5px;
+  animation-delay: 0.2s;
+}
+
+.carousel__name {
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  font-size: 5em;
+  margin: 0;
+  line-height: 1.3em;
+  animation-delay: 0.3s;
+}
+
+.carousel__type {
+  font-size: 2em;
+  color: coral;
+  animation-delay: 0.4s;
+}
+
+.carousel__description {
+  animation-delay: 0.5s;
+}
+
+.carousel__buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 130px);
+  grid-template-rows: 40px;
+  gap: 5px;
+  margin-top: 20px;
+  animation-delay: 0.6s;
+}
+
+@keyframes carousel-show {
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+.carousel__buttons button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: #fff;
+  letter-spacing: 3px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.carousel__buttons a button {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #eee;
+}
+
+.carousel__timer {
+  width: 100%;
+  height: 3px;
+  background-color: orangered;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  animation: carousel-timer 7s linear forwards;
+}
+
+@keyframes carousel-timer {
+  to {
+    width: 0;
+  }
+}
+
+.carousel__thumbnails {
+  position: absolute;
+  bottom: 20px;
+  left: 60%;
+  width: max-content;
+  max-width: 38%;
+  z-index: 100;
+  display: flex;
+  gap: 20px;
+}
+
+.carousel__thumb {
+  width: 150px;
+  height: 220px;
+  flex-shrink: 0;
+  position: relative;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.carousel__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+}
+
+.carousel__thumb-content {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  text-align: left;
+  color: #fff;
+}
+
+.carousel__thumb-title {
+  font-weight: bold;
+}
+
+.carousel__arrows {
+  position: absolute;
+  top: 80%;
+  right: 61.7%;
+  width: 300px;
+  max-width: 30%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  z-index: 101;
+}
+
+.carousel__arrows button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #eee4;
+  border: none;
+  font-family: monospace;
+  color: #eee;
+  font-weight: bold;
+  font-size: large;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.carousel__arrows button:hover {
+  background-color: #fff;
+  color: #555;
+}
+
+@media screen and (max-width: 678px) {
+  .carousel__content {
+    padding-right: 0;
+  }
+  .carousel__name {
+    font-size: 30px;
+  }
+  .carousel__thumbnails {
+    display: none;
+  }
+}
