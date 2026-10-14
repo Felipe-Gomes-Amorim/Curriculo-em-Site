@@ -1,0 +1,36 @@
+/* Diagonal light streak that sweeps across the selected project icon, right to left.
+   The ease-in-out curve is what gives it the "fast through the middle, easing off at
+   the ends" feel — a linear timing function would read as a mechanical scan. The
+   start/end offsets are in units of the streak's own width and include extra margin
+   for the skew, so it's fully outside the tile at both ends of every loop. */
+.project-icon-shine {
+  position: absolute;
+  top: -20%;
+  bottom: -20%;
+  left: 0;
+  width: 22%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: translateX(580%) skewX(-20deg);
+  animation: project-icon-shine 1.8s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+@keyframes project-icon-shine {
+  from {
+    transform: translateX(580%) skewX(-20deg);
+  }
+  to {
+    transform: translateX(-260%) skewX(-20deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-icon-shine {
+    animation: none;
+    display: none;
+  }
+}

@@ -1,0 +1,28 @@
+@keyframes project-panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-panel {
+  animation: project-panel-in 0.35s ease;
+}
+
+.project-icon-row {
+  scrollbar-width: thin;
+  scrollbar-color: #1c2420 transparent;
+}
+
+.project-icon-row::-webkit-scrollbar {
+  height: 6px;
+}
+
+.project-icon-row::-webkit-scrollbar-thumb {
+  background: #1c2420;
+  border-radius: 3px;
+}

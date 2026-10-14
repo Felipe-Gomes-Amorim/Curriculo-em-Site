@@ -1,0 +1,9 @@
+.boot-cursor {
+  animation: boot-blink 0.9s steps(1) infinite;
+}
+
+@keyframes boot-blink {
+  50% {
+    opacity: 0;
+  }
+}

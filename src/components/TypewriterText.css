@@ -1,0 +1,9 @@
+.typewriter-cursor {
+  animation: typewriter-blink 0.9s steps(1) infinite;
+}
+
+@keyframes typewriter-blink {
+  50% {
+    opacity: 0;
+  }
+}
