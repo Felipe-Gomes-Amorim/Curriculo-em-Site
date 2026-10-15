@@ -5,11 +5,22 @@ import cronostadiaIcon from '../assets/projects/cronostadia-icon.jpg'
 import tetraplaIcon from '../assets/projects/tetrapla-icon.jpg'
 import iamonIcon from '../assets/projects/iamon-icon.jpg'
 import mixEngineIcon from '../assets/projects/mix-engine-icon.jpg'
+import kirbyRecompIcon from '../assets/projects/kirby-recomp-icon.jpg'
 
 // `icon` is the square tile in the project picker row; `image` is the banner
 // shown in the expanded project card. They're separate on purpose.
 
 export const projects = [
+  {
+    id: 'kirby-recomp',
+    name: 'Kirby & The Amazing Mirror — Recompilação Estática',
+    stack: ['C', 'Python', 'ARM7TDMI', 'Engenharia Reversa'],
+    description:
+      'Projeto educacional que recompila estaticamente um jogo de Game Boy Advance para C, rodando nativamente no PC, sem emulador. Um recompilador traduz o código de máquina ARM7TDMI/Thumb instrução por instrução e o liga a um runtime que reproduz o hardware do console (vídeo, DMA, timers, interrupções, BIOS). Inclui análise da ROM (5.669 funções mapeadas, separando ARM, Thumb e dados), tratamento de desvios indiretos por tabelas de ponteiros e testes instrução a instrução contra o Unicorn. O jogo já inicia e roda mais de 8.000 frames, com janela, teclado e save. Nenhuma ROM ou asset é distribuído.',
+    image: null,
+    icon: kirbyRecompIcon,
+    github: 'https://github.com/Felipe-Gomes-Amorim/kirby-amazing-mirror-recomp',
+  },
   {
     id: 'scx',
     name: 'SCX — Sistema de Controle de Exames',

@@ -6,7 +6,7 @@ export const entries = [
   {
     role: 'AI Developer & Software Engineer',
     place: 'ArcadiA Education (EdTech)',
-    period: 'desde fev. 2026',
+    period: 'fev. 2026 – out. 2026',
     description: 'Desenvolvimento de software aplicado a soluções de IA para o setor educacional.',
   },
   {

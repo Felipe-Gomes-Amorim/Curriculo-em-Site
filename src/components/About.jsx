@@ -7,9 +7,9 @@ import Reveal from './Reveal'
 const ABOUT_TEXT =
   'Sou Engenheiro de Software, formado pela Universidade de Mogi das Cruzes, com experiência prática ' +
   'construindo sistemas de naturezas variadas: aplicações web, apps desktop, jogos, integrações com APIs e ' +
-  'ferramentas de inteligência artificial. Atualmente atuo como AI Developer & Software Engineer na ArcadiA ' +
-  'Education, onde trabalho com desenvolvimento de software aplicado a soluções de IA para o setor ' +
-  'educacional. Gosto de participar do processo completo de um projeto — da arquitetura à entrega — e de ' +
+  'ferramentas de inteligência artificial — incluindo passagem como AI Developer & Software Engineer na ' +
+  'ArcadiA Education, com software aplicado a soluções de IA para o setor educacional — e engenharia ' +
+  'reversa de baixo nível, como a recompilação estática de um jogo de GBA. Gosto de participar do processo completo de um projeto — da arquitetura à entrega — e de ' +
   'aprender a fundo cada tecnologia que uso.'
 
 export default function About() {

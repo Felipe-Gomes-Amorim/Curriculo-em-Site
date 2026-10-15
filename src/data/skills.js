@@ -2,7 +2,7 @@
 //   glyph — 2D fallback icon (SaveGlyph), shown until the 3D model is ready / if WebGL fails
 //   model — 3D model id (see components/ps2/models.js)
 export const skillCategories = [
-  { id: 'linguagens', label: 'Linguagens', glyph: 'code', model: 'laptop', items: ['Python', 'JavaScript', 'TypeScript', 'C', 'C# (básico)'] },
+  { id: 'linguagens', label: 'Linguagens', glyph: 'code', model: 'laptop', items: ['Python', 'JavaScript', 'TypeScript', 'C', 'Assembly ARM', 'C# (básico)'] },
   { id: 'frontend', label: 'Front-end', glyph: 'browser', model: 'browser', items: ['React', 'HTML', 'CSS'] },
   { id: 'backend', label: 'Back-end / Dados', glyph: 'database', model: 'database', items: ['Node.js', 'Flask', 'SQL'] },
   { id: 'ia', label: 'IA / ML', glyph: 'neural', model: 'robot', items: ['Machine Learning', 'Análise de Dados'] },
