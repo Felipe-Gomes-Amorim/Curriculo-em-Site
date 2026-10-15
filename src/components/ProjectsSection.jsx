@@ -10,8 +10,6 @@ import './ProjectsSection.css'
 export default function ProjectsSection() {
   const [activeId, setActiveId] = useState(projects[0].id)
 
-  const activeProject = projects.find((p) => p.id === activeId) ?? null
-
   return (
     <Box as="section" id="projetos">
         <SectionHeading>projetos</SectionHeading>
@@ -36,11 +34,25 @@ export default function ProjectsSection() {
             ))}
           </Flex>
 
-          {activeProject && (
-            <Box key={activeProject.id} className="project-panel">
-              <ProjectCard project={activeProject} reverse={false} />
-            </Box>
-          )}
+          {/* Every card sits in the same grid cell so the area is always as tall as the
+              tallest one; otherwise the vertically-centered section shifts (and the
+              icon row jumps) whenever a shorter/longer project is selected. */}
+          <Box display="grid">
+            {projects.map((project) => {
+              const isActive = project.id === activeId
+              return (
+                <Box
+                  key={project.id}
+                  gridArea="1 / 1"
+                  className={isActive ? 'project-panel' : undefined}
+                  visibility={isActive ? 'visible' : 'hidden'}
+                  aria-hidden={!isActive}
+                >
+                  <ProjectCard project={project} reverse={false} />
+                </Box>
+              )
+            })}
+          </Box>
         </Reveal>
     </Box>
   )
